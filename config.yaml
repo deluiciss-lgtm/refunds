@@ -238,7 +238,7 @@ text:
       emoji: "🎫"
 
   steps:
-    title: "🚀 Starting up your order"
+    title: "🚀 Activating your order"
     choose_region: "Which store did you order from?"
     choose_issue: "What can we help you with?"
     choose_product: "Which product is this about?"
