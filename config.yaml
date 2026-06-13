@@ -77,11 +77,6 @@ products:
     emoji: "📱"
     prices: { com: 180, ca: 240, eu: 170 }
     excluded_issues: ["amazon"] 
-  - id: "iphone_17_pro"
-    label: "iPhone 17 Pro"
-    emoji: "📱"
-    prices: { com: 1099, ca: 1599, eu: 1299 }
-    excluded_issues: ["amazon"]
 
 # ----- TICKET STATUSES (used by /setstatus, renames channel, DMs owner) ------
 statuses:
