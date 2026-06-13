@@ -1,0 +1,237 @@
+# =============================================================================
+#  SUPPORT / ORDER-TRACKER BOT — CONFIG FILE
+# =============================================================================
+#  Edit THIS file to customize everything. You don't need to touch bot.py.
+#
+#  Quick rules:
+#    - Use spaces, not tabs. Copy an existing block when adding new items.
+#    - Text in "quotes" is yours to rewrite.
+#    - Emoji can be "🛍️" or "" for none.
+#    - {placeholders} like {percent} or {user} get filled in automatically.
+# =============================================================================
+
+
+# -----------------------------------------------------------------------------
+#  SERVER SETTINGS  (numeric IDs — see README "How to get IDs")
+# -----------------------------------------------------------------------------
+server:
+  tickets_channel_id: 0     # where /setup posts the panel (0 = current channel)
+  ticket_category_id: 0     # category new tickets go under (0 = none)
+  staff_role_id: 0          # role that sees all tickets + gets pinged (0 = off)
+  guild_id: 0               # your server ID (recommended: instant slash commands)
+
+
+# -----------------------------------------------------------------------------
+#  COLORS
+# -----------------------------------------------------------------------------
+appearance:
+  primary_color: "#5865F2"   # main embeds / steps
+  success_color: "#57F287"   # confirmations
+  danger_color:  "#ED4245"   # cancel / close
+  sale_color:    "#FEE75C"   # the deal reveal (gold)
+
+
+# -----------------------------------------------------------------------------
+#  THE SALE  (how the discount is shown — applies to the product's base price)
+# -----------------------------------------------------------------------------
+#  Example with base 1999, discount 65, deposit 25:
+#    Base:          $1,999      (shown struck-through)
+#    65% OFF        ->  Final total = 35% of base = $699.65
+#    Due upfront    =  25% of base = $499.75
+#  A product can override "discount_percent" individually (see products below).
+sale:
+  enabled: true
+  discount_percent: 65       # % off the base price
+  deposit_percent: 25        # % of base due upfront today
+
+
+# -----------------------------------------------------------------------------
+#  STORE REGIONS / DOMAINS  (the FIRST dropdown the customer picks)
+# -----------------------------------------------------------------------------
+#  This tells you which of your store's regional sites the order came from.
+regions:
+  - id: "com"
+    label: "yourstore.com (US)"
+    domain: "yourstore.com"
+    emoji: "🇺🇸"
+    symbol: "$"
+  - id: "ca"
+    label: "yourstore.ca (Canada)"
+    domain: "yourstore.ca"
+    emoji: "🇨🇦"
+    symbol: "$"
+  - id: "eu"
+    label: "yourstore.eu (Europe)"
+    domain: "yourstore.eu"
+    emoji: "🇪🇺"
+    symbol: "€"
+
+
+# -----------------------------------------------------------------------------
+#  ISSUE TYPES  (the SECOND dropdown)
+# -----------------------------------------------------------------------------
+issues:
+  - id: "refund"
+    label: "Refund request"
+    emoji: "💸"
+  - id: "exchange"
+    label: "Exchange / replacement"
+    emoji: "🔁"
+  - id: "shipping"
+    label: "Shipping / delivery problem"
+    emoji: "📦"
+  - id: "damaged"
+    label: "Damaged or wrong item"
+    emoji: "💥"
+  - id: "other"
+    label: "Something else"
+    emoji: "💬"
+
+
+# -----------------------------------------------------------------------------
+#  PRODUCTS  (the THIRD dropdown)  — REPLACE THESE WITH YOUR REAL PRODUCTS
+# -----------------------------------------------------------------------------
+#  prices: one entry per region id above. The base price drives the sale reveal.
+#  Optional: add "discount_percent: 50" to a product to override the global sale.
+products:
+  - id: "product_a"
+    label: "Signature Hoodie"
+    emoji: "🧥"
+    prices: { com: 120, ca: 160, eu: 110 }
+  - id: "product_b"
+    label: "Everyday Sneakers"
+    emoji: "👟"
+    prices: { com: 180, ca: 240, eu: 170 }
+  - id: "product_c"
+    label: "Premium Watch"
+    emoji: "⌚"
+    prices: { com: 1999, ca: 2599, eu: 1899 }
+    discount_percent: 70    # example of a per-product sale override
+
+
+# -----------------------------------------------------------------------------
+#  ALL TEXT  (rewrite freely)
+# -----------------------------------------------------------------------------
+text:
+
+  panel:
+    title: "🛍️ Customer Support & Order Help"
+    description: >
+      Need help with an order? Open a support ticket in a few quick taps.
+      We'll confirm your order, see how we can help, and make sure you still
+      get the most out of your current deal. 💛
+    footer: "YourStore Support"
+    link_button:
+      label: "Visit Our Store"
+      emoji: "🔗"
+      url: "https://yourstore.com"
+    start_button:
+      label: "Open a Support Ticket"
+      emoji: "🎫"
+
+  steps:
+    title: "New Support Ticket"
+    choose_region: "Which store did you order from?"
+    choose_issue: "What can we help you with?"
+    choose_product: "Which product is this about?"
+    progress: "{bar}  Step {n} of {total}"
+
+  sale:
+    title: "🔥 Your Exclusive Deal Is Still Active!"
+    line_was: "Regular price: ~~{base}~~"
+    line_off: "**{percent}% OFF** applied 🎉"
+    line_total: "**Your total today: {final}**"
+    line_deposit: "💳 Due upfront now: **{deposit}**"
+    line_savings: "🤑 You're saving **{savings}**!"
+    continue_button:
+      label: "Continue ➜"
+      emoji: "✨"
+    none_text: "Let's get your order details next."
+
+  forms:
+    order:
+      title: "📋 Order Information"
+      order_number: "Order Number"
+      order_number_ph: "e.g. #1024"
+      order_total: "Order Total"
+      order_total_ph: "e.g. $129.99"
+      order_date: "Order Date"
+      order_date_ph: "e.g. 2026-06-01"
+      delivery_date: "Delivery Date (or expected)"
+      delivery_date_ph: "e.g. 2026-06-09 (optional)"
+      items: "Items Ordered"
+      items_ph: "List the items in your order"
+    personal:
+      title: "👤 Your Details"
+      name: "Name On Order"
+      name_ph: "Full name used at checkout"
+      email: "Email (optional)"
+      email_ph: "Helps us find your order faster"
+      phone: "Phone Number"
+      phone_ph: "Best number to reach you"
+      notes: "Anything else? (optional)"
+      notes_ph: "Any other details you'd like to add"
+    shipping:
+      title: "📦 Shipping Address"
+      street: "Street Address"
+      city: "City"
+      state: "State / Province"
+      zip: "Zip / Postal Code"
+      country: "Country"
+    billing:
+      title: "🧾 Billing Address"
+      same_button: "Same as shipping ✅"
+      different_button: "Enter a different address"
+      prompt: "Is your billing address the same as your shipping address?"
+
+  confirmation:
+    title: "🧾 Please Confirm Your Ticket"
+    description: "Quick review — everything look right? Confirm to open your ticket."
+    footer: "YourStore Support"
+    confirm_button:
+      label: "Confirm & Open Ticket"
+      emoji: "✅"
+    cancel_button:
+      label: "Cancel"
+      emoji: "✖️"
+    cancelled_message: "❌ Cancelled. You can start over any time from the panel."
+    created_message: "🎉 Your ticket is open: {channel}\nYour order number is **{order_no}** — I've also sent it to your DMs."
+
+  ticket:
+    title: "🎫 Support Ticket — {order_no}"
+    notice: >
+      {user}, thanks for reaching out! 💛 Your ticket number is **{order_no}** —
+      save it so you can find this ticket again with `/lookup {order_no}`.
+      A team member will be with you shortly.
+    footer: "YourStore Support • Keep your order number safe"
+    close_button:
+      label: "Close Ticket"
+      emoji: "🔒"
+    support_button:
+      label: "Request Support"
+      emoji: "🆘"
+    support_message: "{staff} — a customer has requested support here."
+    closing_message: "🔒 This ticket will close in 5 seconds…"
+
+  dm:
+    title: "🎫 Your Support Ticket Is Open"
+    body: >
+      Thanks for contacting YourStore Support! Here are your ticket details —
+      please keep them safe.
+
+
+      **Order number:** {order_no}
+
+      **Reopen anytime:** use `/lookup {order_no}` in the server.
+
+
+      [Jump to your ticket]({link})
+
+  lookup:
+    description: "Look up one of your support tickets by order number."
+    not_found: "🔎 I couldn't find a ticket with order number **{order_no}** that you have access to."
+    found: "✅ Found it! Here's your ticket: {channel}\nOrder number: **{order_no}**"
+
+  errors:
+    no_permission: "⚠️ You don't have permission to do that."
+    generic: "⚠️ Something went wrong. Please try again."
