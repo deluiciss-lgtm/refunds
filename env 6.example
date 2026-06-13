@@ -1,0 +1,7 @@
+# Copy this file to ".env" and paste your bot token after the = sign.
+# Never share this token or commit the real .env file anywhere public.
+DISCORD_TOKEN=paste-your-bot-token-here
+
+# Optional: where to store the credits file (default: data).
+# On Railway, mount a Volume at /app/data to keep credits across redeploys.
+# DATA_DIR=data
