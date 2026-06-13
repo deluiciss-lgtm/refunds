@@ -167,6 +167,31 @@ products:
     emoji: "📱"
     prices: { com: 999, ca: 1399, eu: 1199 }
     excluded_issues: ["amazon"]
+  - id: "product_u"
+    label: "AirPods 4"
+    emoji: "🎧"
+    prices: { com: 129, ca: 179, eu: 149 }
+    excluded_issues: ["amazon"]
+  - id: "product_v"
+    label: "AirPods 4 with ANC"
+    emoji: "🎧"
+    prices: { com: 179, ca: 249, eu: 199 }
+    excluded_issues: ["amazon"]
+  - id: "product_w"
+    label: "AirPods Pro 3"
+    emoji: "🎧"
+    prices: { com: 249, ca: 329, eu: 279 }
+    excluded_issues: ["amazon"]
+  - id: "product_x"
+    label: "AirPods Max"
+    emoji: "🎧"
+    prices: { com: 549, ca: 779, eu: 579 }
+    excluded_issues: ["amazon"]
+  - id: "product_y"
+    label: "Apple Vision Pro"
+    emoji: "🥽"
+    prices: { com: 3499, ca: 4799, eu: 3999 }
+    excluded_issues: ["amazon"]
 
 
 # ----- TICKET STATUSES (used by /setstatus, renames channel, DMs owner) ------
