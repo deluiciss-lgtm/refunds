@@ -30,61 +30,193 @@ sale:
 # ----- STORE REGIONS / DOMAINS (1st dropdown) --------------------------------
 regions:
   - id: "com"
-    label: "yourstore.com (US)"
-    domain: "yourstore.com"
+    label: "United States of America"
+    domain: "eg. apple.com"
     emoji: "🇺🇸"
     symbol: "$"
   - id: "ca"
-    label: "yourstore.ca (Canada)"
+    label: "Canada"
     domain: "yourstore.ca"
     emoji: "🇨🇦"
     symbol: "$"
   - id: "eu"
-    label: "yourstore.eu (Europe)"
+    label: "Europe"
     domain: "yourstore.eu"
     emoji: "🇪🇺"
+    symbol: "€"
+  - id: "other"
+    label: "Other (Ask for eligibility)"
+    domain: "yourstore.eu"
+    emoji: "🌍"
     symbol: "€"
 
 # ----- ISSUE TYPES (2nd dropdown) --------------------------------------------
 issues:
-  - id: "refund"
-    label: "Refund request"
-    emoji: "💸"
-  - id: "exchange"
-    label: "Exchange / replacement"
-    emoji: "🔁"
-  - id: "shipping"
-    label: "Shipping / delivery problem"
+  - id: "apple"
+    label: "Apple"
+    emoji: "🍎"
+  - id: "amazon"
+    label: "Amazon"
     emoji: "📦"
-  - id: "damaged"
-    label: "Damaged or wrong item"
-    emoji: "💥"
-  - id: "other"
-    label: "Something else"
-    emoji: "💬"
 
 # ----- PRODUCTS (3rd dropdown) — REPLACE WITH YOUR REAL PRODUCTS -------------
 #  ELIGIBILITY BY ISSUE (optional):
 #    excluded_issues: ["refund"]   -> hide this product when that issue is picked
 #                                     (e.g. final-sale items can't be refunded)
 #    allowed_issues:  ["shipping"] -> ONLY show it for these issues
+# also  " discount_percent: 70 "
 #    (omit both = available for every issue)  The ids must match the "issues" list.
 products:
   - id: "product_a"
-    label: "Signature Hoodie"
-    emoji: "🧥"
+    label: "iPhone 17e"
+    emoji: "📱"
     prices: { com: 120, ca: 160, eu: 110 }
-    excluded_issues: ["refund"]    # final sale — not eligible for refunds
+    excluded_issues: ["amazon"]   
   - id: "product_b"
-    label: "Everyday Sneakers"
-    emoji: "👟"
+    label: "iPhone 17"
+    emoji: "📱"
     prices: { com: 180, ca: 240, eu: 170 }
-    excluded_issues: ["refund", "other"] 
-  - id: "product_c"
-    label: "Premium Watch"
+    excluded_issues: ["amazon"] 
+  - id: "iphone_17_pro"
+    label: "iPhone 17 Pro"
+    emoji: "📱"
+    prices: { com: 1099, ca: 1599, eu: 1299 }
+    excluded_issues: ["amazon"]
+  - id: "iphone_17_pro_max"
+    label: "iPhone 17 Pro Max"
+    emoji: "📱"
+    prices: { com: 1199, ca: 1749, eu: 1449 }
+    excluded_issues: ["amazon"]
+  - id: "iphone_air"
+    label: "iPhone Air"
+    emoji: "📱"
+    prices: { com: 999, ca: 1449, eu: 1199 }
+    excluded_issues: ["amazon"]
+  - id: "macbook_neo"
+    label: "MacBook Neo"
+    emoji: "💻"
+    prices: { com: 599, ca: 799, eu: 699 }
+    excluded_issues: ["amazon"]
+  - id: "macbook_air"
+    label: "MacBook Air"
+    emoji: "💻"
+    prices: { com: 1099, ca: 1449, eu: 1299 }
+    excluded_issues: ["amazon"]
+  - id: "macbook_pro_14"
+    label: "MacBook Pro 14\""
+    emoji: "💻"
+    prices: { com: 1699, ca: 2199, eu: 1999 }
+    excluded_issues: ["amazon"]
+  - id: "macbook_pro_16"
+    label: "MacBook Pro 16\""
+    emoji: "💻"
+    prices: { com: 2699, ca: 3499, eu: 3199 }
+    excluded_issues: ["amazon"]
+  - id: "mac_mini"
+    label: "Mac mini"
+    emoji: "🖥️"
+    prices: { com: 799, ca: 1049, eu: 949 }
+    excluded_issues: ["amazon"]
+  - id: "imac"
+    label: "iMac"
+    emoji: "🖥️"
+    prices: { com: 1299, ca: 1699, eu: 1599 }
+    excluded_issues: ["amazon"]
+  - id: "mac_studio"
+    label: "Mac Studio"
+    emoji: "🖥️"
+    prices: { com: 1999, ca: 2699, eu: 2399 }
+    excluded_issues: ["amazon"]
+  - id: "mac_pro"
+    label: "Mac Pro"
+    emoji: "🖥️"
+    prices: { com: 6999, ca: 8999, eu: 8299 }
+    excluded_issues: ["amazon"]
+  - id: "apple_watch_series_11"
+    label: "Apple Watch Series 11"
     emoji: "⌚"
-    prices: { com: 1999, ca: 2599, eu: 1899 }
-    discount_percent: 70
+    prices: { com: 399, ca: 549, eu: 449 }
+    excluded_issues: ["amazon"]
+  - id: "apple_watch_ultra_3"
+    label: "Apple Watch Ultra 3"
+    emoji: "⌚"
+    prices: { com: 799, ca: 1099, eu: 899 }
+    excluded_issues: ["amazon"]
+  - id: "apple_watch_se_3"
+    label: "Apple Watch SE 3"
+    emoji: "⌚"
+    prices: { com: 249, ca: 329, eu: 279 }
+    excluded_issues: ["amazon"]
+  - id: "ipad_base"
+    label: "iPad"
+    emoji: "📱"
+    prices: { com: 349, ca: 499, eu: 429 }
+    excluded_issues: ["amazon"]
+  - id: "ipad_mini"
+    label: "iPad mini"
+    emoji: "📱"
+    prices: { com: 499, ca: 679, eu: 599 }
+    excluded_issues: ["amazon"]
+  - id: "ipad_air_11"
+    label: "iPad Air 11\""
+    emoji: "📱"
+    prices: { com: 599, ca: 799, eu: 719 }
+    excluded_issues: ["amazon"]
+  - id: "ipad_pro_11"
+    label: "iPad Pro 11\""
+    emoji: "📱"
+    prices: { com: 999, ca: 1399, eu: 1199 }
+    excluded_issues: ["amazon"]
+  - id: "airpods_4"
+    label: "AirPods 4"
+    emoji: "🎧"
+    prices: { com: 129, ca: 179, eu: 149 }
+    excluded_issues: ["amazon"]
+  - id: "airpods_4_anc"
+    label: "AirPods 4 with ANC"
+    emoji: "🎧"
+    prices: { com: 179, ca: 249, eu: 199 }
+    excluded_issues: ["amazon"]
+  - id: "airpods_pro_2"
+    label: "AirPods Pro 2"
+    emoji: "🎧"
+    prices: { com: 249, ca: 329, eu: 279 }
+    excluded_issues: ["amazon"]
+  - id: "airpods_max"
+    label: "AirPods Max"
+    emoji: "🎧"
+    prices: { com: 549, ca: 779, eu: 579 }
+    excluded_issues: ["amazon"]
+  - id: "apple_vision_pro"
+    label: "Apple Vision Pro"
+    emoji: "🥽"
+    prices: { com: 3499, ca: 4799, eu: 3999 }
+    excluded_issues: ["amazon"]
+  - id: "studio_display"
+    label: "Studio Display"
+    emoji: "🖥️"
+    prices: { com: 1599, ca: 1999, eu: 1749 }
+    excluded_issues: ["amazon"]
+  - id: "studio_display_xdr"
+    label: "Studio Display XDR"
+    emoji: "🖥️"
+    prices: { com: 3299, ca: 4299, eu: 3699 }
+    excluded_issues: ["amazon"]
+  - id: "apple_tv_4k"
+    label: "Apple TV 4K"
+    emoji: "📺"
+    prices: { com: 129, ca: 179, eu: 169 }
+    excluded_issues: ["amazon"]
+  - id: "homepod"
+    label: "HomePod"
+    emoji: "🔊"
+    prices: { com: 299, ca: 399, eu: 349 }
+    excluded_issues: ["amazon"]
+  - id: "homepod_mini"
+    label: "HomePod mini"
+    emoji: "🔊"
+    prices: { com: 99, ca: 129, eu: 109 }
+    excluded_issues: ["amazon"]
 
 # ----- TICKET STATUSES (used by /setstatus, renames channel, DMs owner) ------
 statuses:
