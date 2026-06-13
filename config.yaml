@@ -30,20 +30,25 @@ sale:
 # ----- STORE REGIONS / DOMAINS (1st dropdown) --------------------------------
 regions:
   - id: "com"
-    label: "yourstore.com (US)"
-    domain: "yourstore.com"
+    label: "United States"
+    domain: "eg. apple.com"
     emoji: "🇺🇸"
     symbol: "$"
   - id: "ca"
-    label: "yourstore.ca (Canada)"
-    domain: "yourstore.ca"
+    label: "Canada"
+    domain: "eg. apple.ca"
     emoji: "🇨🇦"
     symbol: "$"
   - id: "eu"
-    label: "yourstore.eu (Europe)"
-    domain: "yourstore.eu"
+    label: "Europe"
+    domain: "eg. apple.uk"
     emoji: "🇪🇺"
     symbol: "€"
+   - id: "?"
+    label: "Other"
+    domain: "Ask for eligability"
+    emoji: "🌍"
+    symbol: "?"
 
 # ----- ISSUE TYPES (2nd dropdown) --------------------------------------------
 issues:
