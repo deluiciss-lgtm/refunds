@@ -36,17 +36,17 @@ regions:
     symbol: "$"
   - id: "ca"
     label: "Canada"
-    domain: "yourstore.ca"
+    domain: "eg. apple.ca"
     emoji: "🇨🇦"
     symbol: "$"
   - id: "eu"
     label: "Europe"
-    domain: "yourstore.eu"
+    domain: "eg. apple.eu"
     emoji: "🇪🇺"
     symbol: "€"
   - id: "other"
     label: "Other (Ask for eligibility)"
-    domain: "yourstore.eu"
+    domain: "invalid domain"
     emoji: "🌍"
     symbol: "€"
 
@@ -265,7 +265,7 @@ text:
       Save your order number **{order_no}** — you can reopen this ticket
       anytime with `/lookup {order_no}`. 
 
-      **READ THE INFORMATION TICKET FOR YOUR COMPANY BEFORE CONTINUING**
+      **READ THE INFORMATION CHANNEL FOR YOUR COMPANY BEFORE CONTINUING**
     
     provide_button:
       label: "Provide Order Details"
