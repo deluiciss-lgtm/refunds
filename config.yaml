@@ -79,6 +79,7 @@ products:
     label: "Everyday Sneakers"
     emoji: "👟"
     prices: { com: 180, ca: 240, eu: 170 }
+    excluded_issues: ["refund", "other"] 
   - id: "product_c"
     label: "Premium Watch"
     emoji: "⌚"
