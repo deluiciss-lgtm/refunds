@@ -44,7 +44,7 @@ regions:
     domain: "eg. apple.uk"
     emoji: "🇪🇺"
     symbol: "€"
-   - id: "?"
+  - id: "other"
     label: "Other"
     domain: "Ask for eligability"
     emoji: "🌍"
