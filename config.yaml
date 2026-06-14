@@ -30,60 +30,169 @@ sale:
 # ----- STORE REGIONS / DOMAINS (1st dropdown) --------------------------------
 regions:
   - id: "com"
-    label: "yourstore.com (US)"
-    domain: "yourstore.com"
+    label: "United States of America"
+    domain: "eg. apple.com"
     emoji: "🇺🇸"
     symbol: "$"
   - id: "ca"
-    label: "yourstore.ca (Canada)"
-    domain: "yourstore.ca"
+    label: "Canada"
+    domain: "eg. apple.ca"
     emoji: "🇨🇦"
     symbol: "$"
   - id: "eu"
-    label: "yourstore.eu (Europe)"
-    domain: "yourstore.eu"
+    label: "Europe"
+    domain: "eg. apple.eu"
     emoji: "🇪🇺"
+    symbol: "€"
+  - id: "other"
+    label: "Other (Ask for eligibility)"
+    domain: "invalid domain"
+    emoji: "🌍"
     symbol: "€"
 
 # ----- ISSUE TYPES (2nd dropdown) --------------------------------------------
 issues:
-  - id: "refund"
-    label: "Refund request"
-    emoji: "💸"
-  - id: "exchange"
-    label: "Exchange / replacement"
-    emoji: "🔁"
-  - id: "shipping"
-    label: "Shipping / delivery problem"
+  - id: "apple"
+    label: "Apple"
+    emoji: "🍎"
+  - id: "amazon"
+    label: "Amazon"
     emoji: "📦"
-  - id: "damaged"
-    label: "Damaged or wrong item"
-    emoji: "💥"
-  - id: "other"
-    label: "Something else"
-    emoji: "💬"
 
 # ----- PRODUCTS (3rd dropdown) — REPLACE WITH YOUR REAL PRODUCTS -------------
 #  ELIGIBILITY BY ISSUE (optional):
 #    excluded_issues: ["refund"]   -> hide this product when that issue is picked
 #                                     (e.g. final-sale items can't be refunded)
 #    allowed_issues:  ["shipping"] -> ONLY show it for these issues
+# also  " discount_percent: 70 "
 #    (omit both = available for every issue)  The ids must match the "issues" list.
 products:
   - id: "product_a"
-    label: "Signature Hoodie"
-    emoji: "🧥"
-    prices: { com: 120, ca: 160, eu: 110 }
-    excluded_issues: ["refund"]    # final sale — not eligible for refunds
+    label: "iPhone 17e"
+    emoji: "📱"
+    prices: { com: 599, ca: 899, eu: 699 }
+    excluded_issues: ["amazon"]   
   - id: "product_b"
-    label: "Everyday Sneakers"
-    emoji: "👟"
-    prices: { com: 180, ca: 240, eu: 170 }
+    label: "iPhone 17"
+    emoji: "📱"
+    prices: { com: 799, ca: 1129, eu: 949 }
+    excluded_issues: ["amazon"] 
   - id: "product_c"
-    label: "Premium Watch"
+    label: "iPhone 17 Pro"
+    emoji: "📱"
+    prices: { com: 1099, ca: 1599, eu: 1299 }
+    excluded_issues: ["amazon"]
+  - id: "product_d"
+    label: "iPhone 17 Pro Max"
+    emoji: "📱"
+    prices: { com: 1199, ca: 1749, eu: 1449 }
+    excluded_issues: ["amazon"]
+  - id: "product_e"
+    label: "iPhone Air"
+    emoji: "📱"
+    prices: { com: 999, ca: 1449, eu: 1199 }
+    excluded_issues: ["amazon"]
+  - id: "product_f"
+    label: "MacBook Neo"
+    emoji: "💻"
+    prices: { com: 599, ca: 799, eu: 699 }
+    excluded_issues: ["amazon"]
+  - id: "product_g"
+    label: "MacBook Air"
+    emoji: "💻"
+    prices: { com: 1099, ca: 1449, eu: 1299 }
+    excluded_issues: ["amazon"]
+  - id: "product_h"
+    label: "MacBook Pro 14\""
+    emoji: "💻"
+    prices: { com: 1699, ca: 2199, eu: 1999 }
+    excluded_issues: ["amazon"]
+  - id: "product_i"
+    label: "MacBook Pro 16\""
+    emoji: "💻"
+    prices: { com: 2699, ca: 3499, eu: 3199 }
+    excluded_issues: ["amazon"]
+  - id: "product_j"
+    label: "Mac mini"
+    emoji: "🖥️"
+    prices: { com: 799, ca: 1049, eu: 949 }
+    excluded_issues: ["amazon"]
+  - id: "product_k"
+    label: "iMac"
+    emoji: "🖥️"
+    prices: { com: 1299, ca: 1699, eu: 1599 }
+    excluded_issues: ["amazon"]
+  - id: "product_l"
+    label: "Mac Studio"
+    emoji: "🖥️"
+    prices: { com: 1999, ca: 2699, eu: 2399 }
+    excluded_issues: ["amazon"]
+  - id: "product_m"
+    label: "Mac Pro"
+    emoji: "🖥️"
+    prices: { com: 6999, ca: 8999, eu: 8299 }
+    excluded_issues: ["amazon"]
+  - id: "product_n"
+    label: "Apple Watch Series 11"
     emoji: "⌚"
-    prices: { com: 1999, ca: 2599, eu: 1899 }
-    discount_percent: 70
+    prices: { com: 399, ca: 549, eu: 449 }
+    excluded_issues: ["amazon"]
+  - id: "product_o"
+    label: "Apple Watch Ultra 3"
+    emoji: "⌚"
+    prices: { com: 799, ca: 1099, eu: 899 }
+    excluded_issues: ["amazon"]
+  - id: "product_p"
+    label: "Apple Watch SE 3"
+    emoji: "⌚"
+    prices: { com: 249, ca: 329, eu: 279 }
+    excluded_issues: ["amazon"]
+  - id: "product_q"
+    label: "iPad"
+    emoji: "📱"
+    prices: { com: 349, ca: 499, eu: 429 }
+    excluded_issues: ["amazon"]
+  - id: "product_r"
+    label: "iPad mini"
+    emoji: "📱"
+    prices: { com: 499, ca: 679, eu: 599 }
+    excluded_issues: ["amazon"]
+  - id: "product_s"
+    label: "iPad Air 11\""
+    emoji: "📱"
+    prices: { com: 599, ca: 799, eu: 719 }
+    excluded_issues: ["amazon"]
+  - id: "product_t"
+    label: "iPad Pro 11\""
+    emoji: "📱"
+    prices: { com: 999, ca: 1399, eu: 1199 }
+    excluded_issues: ["amazon"]
+  - id: "product_u"
+    label: "AirPods 4"
+    emoji: "🎧"
+    prices: { com: 129, ca: 179, eu: 149 }
+    excluded_issues: ["amazon"]
+  - id: "product_v"
+    label: "AirPods 4 with ANC"
+    emoji: "🎧"
+    prices: { com: 179, ca: 249, eu: 199 }
+    excluded_issues: ["amazon"]
+  - id: "product_w"
+    label: "AirPods Pro 3"
+    emoji: "🎧"
+    prices: { com: 249, ca: 329, eu: 279 }
+    excluded_issues: ["amazon"]
+  - id: "product_x"
+    label: "AirPods Max"
+    emoji: "🎧"
+    prices: { com: 549, ca: 779, eu: 579 }
+    excluded_issues: ["amazon"]
+  - id: "product_y"
+    label: "Apple Vision Pro"
+    emoji: "🥽"
+    prices: { com: 3499, ca: 4799, eu: 3999 }
+    excluded_issues: ["amazon"]
+
 
 # ----- TICKET STATUSES (used by /setstatus, renames channel, DMs owner) ------
 statuses:
@@ -101,14 +210,14 @@ statuses:
     emoji: "✅"
   - id: "successful"
     label: "Successful"
-    emoji: "💚"
+    emoji: "🤑"
   - id: "failed"
     label: "Failed"
     emoji: "🔴"
 
 # ----- CREDITS SYSTEM --------------------------------------------------------
 credits:
-  symbol: "$"
+  symbol: "CA$"
   starting_balance: 0
 
 # ----- ALL TEXT --------------------------------------------------------------
@@ -129,7 +238,7 @@ text:
       emoji: "🎫"
 
   steps:
-    title: "New Support Ticket"
+    title: "🚀 Activating your order"
     choose_region: "Which store did you order from?"
     choose_issue: "What can we help you with?"
     choose_product: "Which product is this about?"
@@ -137,24 +246,27 @@ text:
     progress: "{bar}  Step {n} of {total}"
 
   sale:
-    title: "🔥 Your Exclusive Deal Is Still Active!"
+    title: "🔥 Your offer is now ACTIVE!"
     line_was: "Regular price: ~~{base}~~"
     line_off: "**{percent}% OFF** applied 🎉"
     line_total: "**Your total today: {final}**"
     line_deposit: "💳 Due upfront now: **{deposit}**"
     line_savings: "🤑 You're saving **{savings}**!"
     open_button:
-      label: "Open My Ticket"
-      emoji: "🎟️"
+      label: "Claim my Offer"
+      emoji: "💸"
 
   # In-ticket welcome + the button that starts the detail forms
   details:
-    welcome_title: "🎫 Ticket {order_no} — Welcome!"
+    welcome_title: "🛍️ Order # {order_no} — Welcome!"
     welcome_body: >
-      {user}, your ticket is open! 💛 To help us sort this fast, tap
+      {user}, your ticket is open! 💛 To begin as fast as possible, tap
       **Provide Order Details** below and fill in the short form.
       Save your order number **{order_no}** — you can reopen this ticket
-      anytime with `/lookup {order_no}`.
+      anytime with `/lookup {order_no}`. 
+
+      **READ THE INFORMATION CHANNEL FOR YOUR COMPANY BEFORE CONTINUING**
+    
     provide_button:
       label: "Provide Order Details"
       emoji: "📝"
@@ -216,13 +328,13 @@ text:
     support_button:
       label: "Request Support"
       emoji: "🆘"
-    support_message: "{staff} — a customer has requested support here."
+    support_message: "thanks for your request, we've flagged your ticket for immediete support."
     closing_message: "🔒 This ticket will close in 5 seconds…"
 
   dm:
-    title: "🎫 Your Support Ticket Is Open"
+    title: "📋 Your order is awaiting important details."
     body: >
-      Thanks for contacting YourStore Support! Here are your ticket details —
+      Thanks for your order with $tar Hub! Here are your ticket details —
       please keep them safe.
 
 
@@ -236,9 +348,9 @@ text:
   status:
     # Shown in the channel + DM'd to the customer when status changes.
     changed_channel: "📣 Status updated to **{emoji} {label}** by {mod}."
-    dm_title: "📣 Update On Your Ticket {order_no}"
-    dm_body: "Your ticket **{order_no}** is now: **{emoji} {label}**."
-    current: "Current status of this ticket: **{emoji} {label}**"
+    dm_title: "📣 Update On Your Order {order_no}"
+    dm_body: "Your order **{order_no}** is now: **{emoji} {label}**."
+    current: "Current status of this order: **{emoji} {label}**"
 
   credits_text:
     granted_dm_title: "💰 You received credits!"
@@ -254,8 +366,8 @@ text:
 
   lookup:
     description: "Look up one of your support tickets by order number."
-    not_found: "🔎 I couldn't find a ticket with order number **{order_no}** that you have access to."
-    found: "✅ Found it! Here's your ticket: {channel}\nOrder number: **{order_no}**"
+    not_found: "🔎 I couldn't find a ticket with order number **{order_no}** Please insure you've provided the correct order # and your ticket has not been previously closed."
+    found: "✅ We've located your order! Access it here: {channel}\nOrder number: **{order_no}**"
 
   errors:
     no_permission: "⚠️ You don't have permission to do that."
