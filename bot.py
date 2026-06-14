@@ -8,7 +8,7 @@
    -> see the SALE reveal -> "Open My Ticket"
    -> a private ticket opens with a UNIQUE ORDER NUMBER (DM'd to them)
    -> INSIDE the ticket they tap "Provide Order Details" and fill a short
-      4-step form; the details get posted right into the ticket.
+      4-step form; the details get posted right into the ticket..
 
  Staff/owner commands (see /help):
    /close  /status  /setstatus  /rename  /add  /remove  /claim  /note
